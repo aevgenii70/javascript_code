@@ -134,7 +134,7 @@ let man = new Object();
 man.name = 'Иван';
 console.log(man.name);
 
-***/
+
 
 let programmer = new Object();
 
@@ -153,8 +153,8 @@ let human = {
     skills: ['Java','C++','Python','PHP', 'Golang'],
     hobby: ['походы','кино','чтение','комп.игры','плавание','путешествия'],
 }
-/***
- * 
+
+ 
 
 human.sayHello();
 delete human.lastname;
@@ -175,8 +175,7 @@ for (let i in human) {
     console.log(human[i]);
 }
 
- * 
- */
+
 console.log('бЫЛ ',human.lastname);
 for (let i in human) {
     if (human[i] == 'Петров') human.lastname = 'Иванов';
@@ -195,3 +194,68 @@ const myArray2 = myArray.map(item => item * 2).sort((a, b) => a - b);
 
 console.log(myArray); // [4, 2, 8, 7, 3, 1, 0]
 console.log(myArray2); // [0, 2, 4, 6, 8, 14, 16]
+
+
+let num = 25;
+let bul = (num & 1) ? console.log('нечетное') : console.log('четное');
+
+let num = 4689;
+
+function getReversedNum(num) {
+  let result = 0;
+  while (num) {
+    result = result * 10 + num % 10;
+    num = Math.floor(num / 10);
+  }
+
+  return result;
+}
+
+console.log(getReversedNum(num));
+
+
+function foo() {
+    let name = "Karl";
+    let age = 35;
+    console.log('Hello, World!');
+    alert(name + ' ' + age );
+    alert(typeof(age));
+}
+function summ(a, b) {
+ console.log(a + b);
+}
+summ(2, 3);
+
+// foo()
+
+let show = function() {
+    console.log('Hello, function!');
+}
+show();
+
+let show2 = function() {
+    return 'Hello, function with return!';
+}
+s1 = prompt(show2);
+console.log(s1);
+***/
+
+let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+let array2 = [];
+
+console.log('Array before: ', array);
+let i = array.length - 1;
+let k = 0;
+
+function nechet(arr) {
+    console.log(i);
+    for (i; i >= 0; i--) {
+        if (arr[i] % 2 != 0) {
+            array2[k] = arr[i];
+            k++;
+        }
+    }
+}
+nechet(array);
+
+console.log('Array of odd: ', array2);
